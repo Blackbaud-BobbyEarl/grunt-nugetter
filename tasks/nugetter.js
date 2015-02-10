@@ -58,15 +58,19 @@ module.exports = function(grunt) {
 
   /**
   * Requests the json url and adds response + error handlers.
-  * Removes old zip + dest directory.
+  * Removes old zip + dest directory if they exist.
   **/
   function onPackageIteration(pkg) {
     optionsTarget = merge(true, optionsTask, pkg);
     optionsTarget.tmp = sprintf(optionsTarget.tmp, optionsTarget);
     optionsTarget.dest = sprintf(optionsTarget.dest, optionsTarget);
     optionsTarget.url = sprintf(optionsTarget.version ? optionsTarget.urlVersion : optionsTarget.urlLatest, optionsTarget);
-    grunt.file.delete(optionsTarget.tmp);
-    grunt.file.delete(optionsTarget.dest);
+    if (grunt.file.exists(optionsTarget.tmp)) {
+      grunt.file.delete(optionsTarget.tmp);
+    }
+    if (grunt.file.exists(optionsTarget.dest)) {
+      grunt.file.delete(optionsTarget.dest);
+    }
     grunt.verbose.writeln('Initial request to nuget server %s', optionsTarget.url);
     request({ url: optionsTarget.url, json: true }, onPackageResponse.bind(this)).on('error', onPackageError.bind(this));
   }

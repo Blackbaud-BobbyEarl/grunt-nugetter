@@ -1,7 +1,7 @@
 {
   "name": "grunt-nugetter",
   "description": "Download nuget packages",
-  "version": "0.1.0",
+  "version": "0.3.0",
   "homepage": "https://github.com/bbBobbyEarl/grunt-nugetter",
   "author": {
     "name": "Bobby Earl",
