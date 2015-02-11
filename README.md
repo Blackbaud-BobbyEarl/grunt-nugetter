@@ -62,7 +62,13 @@ Where the unzipped files should be stored.  Option supports referencing other op
 Type: `String`
 Default value: `'%(id)s.zip'`
 
-Where the package sholud be temporarily stored.  Option supports referencing other options as a named parameter.  File is automatically deleted.
+Where the package sholud be temporarily stored.  Option supports referencing other options as a named parameter.  File is automatically deleted if tmpDelete is true.
+
+#### options.tmpDelete
+Type: `Boolean`
+Default value: `true`
+
+Whether the temporary package is automatically deleted.
 
 ### Usage Examples
 

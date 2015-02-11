@@ -31,6 +31,7 @@ module.exports = function(grunt) {
         server: 'http://nuget.org/api/v2/',
         dest: 'nuget/%(id)s',
         tmp: '%(id)s.zip',
+        tmpDelete: true,
         urlLatest: '%(server)sFindPackagesById()?id=\'%(id)s\'&$orderby=Published desc&$top=1',
         urlVersion: '%(server)sPackages(Id=\'%(id)s\',Version=\'%(version)s\''
       };   
@@ -120,7 +121,9 @@ module.exports = function(grunt) {
     grunt.verbose.writeln('%s successfully downloaded.', optionsTarget.tmp);
     zip = new Zip(fs.readFileSync(optionsTarget.tmp), {checkCRC32: true});
     Object.keys(zip.files).map(onFileIteration.bind(this));
-    grunt.file.delete(optionsTarget.tmp);
+    if (optionsTarget.tmpDelete) {
+      grunt.file.delete(optionsTarget.tmp);
+    }
   }
   
   /**
