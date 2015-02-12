@@ -2,7 +2,7 @@
   "name": "grunt-nugetter",
   "description": "Download nuget packages",
   "version": "0.5.1",
-  "homepage": "https://github.com/bbBobbyEarl/grunt-nugetter",
+  "homepage": "https://github.com/Blackbaud-BobbyEarl/grunt-nugetter",
   "author": {
     "name": "Bobby Earl",
     "email": "bobby.earl@blackbaud.com",
@@ -10,15 +10,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/bbBobbyEarl/grunt-nugetter.git"
+    "url": "git://github.com/Blackbaud-BobbyEarl/grunt-nugetter.git"
   },
   "bugs": {
-    "url": "https://github.com/bbBobbyEarl/grunt-nugetter/issues"
+    "url": "https://github.com/Blackbaud-BobbyEarl/grunt-nugetter/issues"
   },
   "licenses": [
     {
       "type": "MIT",
-      "url": "https://github.com/bbBobbyEarl/grunt-nugetter/blob/master/LICENSE-MIT"
+      "url": "https://github.com/Blackbaud-BobbyEarl/grunt-nugetter/blob/master/LICENSE-MIT"
     }
   ],
   "engines": {
